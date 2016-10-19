@@ -5,9 +5,16 @@ import ShapeCalculatorUI.UI;
 import java.util.Scanner;
 
 public abstract class Triangulo extends Forma{
-    Triangulo(){
+    Triangulo(double ladoA, double ladoB, double ladoC){
         super();
+        this.ladoA = ladoA;
+        this.ladoB = ladoB;
+        this.ladoC = ladoC;
         setNombre("triangulo");
+    }
+    
+    public String toString(){
+        return super.toString();
     }
     
     
@@ -32,9 +39,7 @@ public abstract class Triangulo extends Forma{
     
     public void setArea(){
         double p = (getLadoA() + getLadoB() + getLadoC())/2;
-        System.out.println("------" + p + "------");
         double area = ( Math.sqrt(p*(p-getLadoC())*(p-getLadoA())*(p-getLadoB())) );
-        System.out.println("------" + area + "------");
         if(area > 0){
             setArea(area);
         }

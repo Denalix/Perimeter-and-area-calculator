@@ -7,6 +7,15 @@ import java.util.Scanner;
 
 public class Equilatero extends Triangulo{
     
+    public Equilatero(double ladoA, double ladoB, double ladoC){
+        super(ladoA, ladoB, ladoC);
+        setNombre("triangulo equilatero");
+    }
+    
+    public String toString(){
+        return super.toString();
+    }
+    
     public void Dibujar(){
         System.out.println("         /\\       ");
         System.out.println("        /  \\      ");

@@ -5,8 +5,13 @@ import ShapeCalculatorUI.UI;
 
 public abstract class Cuadrilatero extends Forma{
     
-    Cuadrilatero(){
+    public Cuadrilatero(){
         super();
+        setNombre("cuadrilatero");
+    }
+    
+    public String toString(){
+        return super.toString();
     }
     
     private double ladoA;

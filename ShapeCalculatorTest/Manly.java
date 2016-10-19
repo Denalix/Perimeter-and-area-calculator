@@ -9,6 +9,7 @@ import java.util.Scanner;
 public class Manly {
     
     private static Forma form;
+    private static Triangulo tri;
     private static Triangulo equi;
     private static Triangulo isos;
     private static Triangulo esc;
@@ -25,14 +26,15 @@ public class Manly {
     
     public static void main(String[] args){
         
-        equi = new Equilatero();
-        isos = new Isosceles();
-        esc = new Escaleno();
-        cua = new Cuadrado();
-        rec = new Rectangulo();
-        tra = new Trapecio();
-        cir = new Circulo();
-        semicir = new Semicirculo();
+        
+        equi = new Equilatero(0,0,0);
+        isos = new Isosceles(0,0,0);
+        esc = new Escaleno(0,0,0);
+        cua = new Cuadrado(0);
+        rec = new Rectangulo(0,0);
+        tra = new Trapecio(0,0,0,0);
+        cir = new Circulo(0);
+        semicir = new Semicirculo(0);
         ui = new UI();
         val = new Validacion();
         DecimalFormat decimales = new DecimalFormat("0.00");
@@ -125,6 +127,7 @@ public class Manly {
                         continue;
                     }
                     
+                    
                     tri.setArea();
                     tri.setPerimetro();
                     
@@ -144,8 +147,11 @@ public class Manly {
                     cua.setLadoC(ui, dato);
                     cua.setLadoD(ui, dato);
                     
+                    cua = new Cuadrado(cua.getLadoA());
+                    
                     cua.setArea();
                     cua.setPerimetro();
+                    
                     
                     ui.printShapeAreaAndPerimeter(cua, decimales, op);
                     
@@ -166,8 +172,11 @@ public class Manly {
                     cua.setLadoC(ui, dato);
                     cua.setLadoD(ui, dato);
                     
+                    rec = new Rectangulo(rec.getLadoA(), rec.getLadoB());
+                    
                     rec.setArea();
                     rec.setPerimetro();
+                    
                     
                     salir = ui.printShapeAreaAndPerimeter(rec, decimales, op);
                 }
@@ -190,12 +199,11 @@ public class Manly {
                         continue;
                     }
                     
+                    tra = new Trapecio(tra.getLadoA(), tra.getLadoB(), tra.getLadoC(), tra.getLadoD());
+                    
                     tra.setArea();
                     tra.setPerimetro();
                     
-                    if( (tra.getArea() == 0) ){
-                        continue;
-                    }
                     
                     
                     salir = ui.printShapeAreaAndPerimeter(tra, decimales, op);
@@ -209,8 +217,11 @@ public class Manly {
                         continue;
                     }
                     
+                    cir = new Circulo(cir.getRadio());
+                    
                     cir.setArea();
                     cir.setPerimetro();
+                    
                     
                     salir = ui.printShapeAreaAndPerimeter(cir, decimales, op);
                 }
@@ -223,8 +234,11 @@ public class Manly {
                         continue;
                     }
                     
+                    semicir = new Semicirculo(semicir.getRadio());
+                    
                     semicir.setArea();
                     semicir.setPerimetro();
+                    
                     
                     salir = ui.printShapeAreaAndPerimeter(semicir, decimales, op);
                     

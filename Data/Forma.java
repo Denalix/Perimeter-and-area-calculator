@@ -13,7 +13,14 @@ public abstract class Forma {
     private double radio;
     static final double pi = 3.1415;
     
+    public Forma(){
+        setNombre("forma");
+    }
     
+    public String toString(){
+        
+        return String.format("El area del %s es %.2f y el perimetro es %.2f", getNombre(),getArea(), getPerimetro());
+    }
     
     public void setRadio(double radio){
         this.radio = radio;

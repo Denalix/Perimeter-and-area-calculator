@@ -4,9 +4,13 @@ package Data;
 
 public class Semicirculo extends Circulo{
     
-    public Semicirculo(){
-        super();
+    public Semicirculo(double radio){
+        super(radio);
         setNombre("semicirculo");
+    }
+    
+    public String toString(){
+        return super.toString();
     }
     
     public void setArea(){

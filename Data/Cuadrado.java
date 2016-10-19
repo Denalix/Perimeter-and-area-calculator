@@ -6,9 +6,13 @@ import ShapeCalculatorUI.UI;
 
 public class Cuadrado extends Cuadrilatero{
     
-    public Cuadrado(){
+    public Cuadrado(double ladoA){
         super();
         setNombre("cuadrado");
+    }
+    
+    public String toString(){
+        return super.toString();
     }
     
     

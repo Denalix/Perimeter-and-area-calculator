@@ -60,11 +60,14 @@ public class UI {
             return false;
         }
         else{
-            if(op == 1 || op == 3){
+            if(op == 1){
                 System.out.println("El perímetro del " + form.getNombre() + " es: " + decimales.format(form.getPerimetro()) );
                     }
-            if(op == 2 || op == 3){
+            if(op == 2){
                 System.out.println("El área del " + form.getNombre() + " es: " +  decimales.format(form.getArea()) );            
+            }
+            if(op == 3){
+                System.out.println(form);
             }
             return true;
         }

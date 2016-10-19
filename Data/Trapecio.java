@@ -6,9 +6,17 @@ import ShapeCalculatorUI.UI;
 
 public class Trapecio extends Cuadrilatero{
     
-    public Trapecio(){
+    public Trapecio(double ladoA, double ladoB, double baseMayor, double baseMenor){
         super();
+        setLadoC(baseMayor);
+        setLadoD(baseMenor);
+        setLadoA(ladoA);
+        setLadoB(ladoB);
         setNombre("trapecio");
+    }
+    
+    public String toString(){
+        return super.toString();
     }
     
     private double baseMayor;

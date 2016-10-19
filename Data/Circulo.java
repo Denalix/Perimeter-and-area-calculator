@@ -6,9 +6,14 @@ import ShapeCalculatorUI.UI;
 
 public class Circulo extends Forma{
     
-    public Circulo(){
+    public Circulo(double radio){
         super();
+        setRadio(radio);
         setNombre("circulo");
+    }
+    
+    public String toString(){
+        return super.toString();
     }
     
     

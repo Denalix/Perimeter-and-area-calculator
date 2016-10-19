@@ -6,9 +6,13 @@ import ShapeCalculatorUI.UI;
 
 public class Rectangulo extends Cuadrilatero{
     
-    public Rectangulo(){
+    public Rectangulo(double ladoA, double ladoB){
         super();
         setNombre("rectangulo");
+    }
+    
+    public String toString(){
+        return super.toString();
     }
     
      @Override
